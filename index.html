@@ -1,1 +1,205 @@
-<h1>Welcome to my page</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>キーフの手帳</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --paper:      #4fffbb;
+    --ink:        #232025;
+    --ink-soft:   #064d35;
+    --accent:     #b45f3f;   
+    --line:       #e4dfd6;
+    --max-width:  680px;
+  }
+
+  *{ box-sizing: border-box; }
+
+  html{ scroll-behavior: smooth; }
+
+  body{
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', system-ui, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  main{
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 5rem 1.5rem 6rem;
+  }
+
+  h1, h2{
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 600;
+    line-height: 1.15;
+    margin: 0;
+  }
+
+  a{ color: var(--accent); }
+  a:focus-visible, button:focus-visible{
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  /* ---------- Hero ---------- */
+
+  .hero{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .avatar{
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    object-fit: cover;
+    background: var(--line);           
+    border: 1px solid var(--line);
+  }
+
+  .hero h1{
+    font-size: clamp(1.9rem, 4vw, 2.5rem);
+  }
+
+  .hero p{
+    margin: 0.4rem 0 0;
+    color: var(--ink-soft);
+    font-size: 1.05rem;
+  }
+
+  /* ---------- Section blocks ---------- */
+
+  section{
+    margin-bottom: 3.5rem;
+  }
+
+  section h2{
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  section p{
+    margin: 0 0 1rem;
+    max-width: 58ch;
+  }
+
+  hr{
+    border: none;
+    border-top: 1px solid var(--line);
+    margin: 3.5rem 0;
+  }
+
+  /* ---------- Skills / interests tags ---------- */
+
+  .tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .tags li{
+    font-size: 0.9rem;
+    padding: 0.35rem 0.8rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--ink-soft);
+  }
+
+
+  .links{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 0;
+    list-style: none;
+    margin: 0;
+  }
+
+  .links a{
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s ease;
+  }
+
+  .links a:hover{
+    border-color: var(--accent);
+  }
+
+  footer{
+    color: var(--ink-soft);
+    font-size: 0.85rem;
+    padding-top: 1rem;
+  }
+
+
+  @media (max-width: 480px){
+    .hero{
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.2rem;
+    }
+    main{ padding: 3.5rem 1.25rem 4rem; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior: auto; }
+  }
+
+</style>
+</head>
+<body>
+
+<main>
+
+  <section class="hero">
+    <img class="avatar" src="img/pop.jpg" alt="pop">
+    <div>
+      <h1>qkeith121's Notebook</h1>
+       <h1>キーフの手帳</h1>
+      <p>This is where I show stuff.</p>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>
+    Hello, I'm Keith. you can call me Kifu 「キーフ」. I'm currently 
+    studying Japanese Language and Japanese Literature【日本語と日本の文学「Nihongo　Bungaku」】
+    and im working really hard to reach N2~N1 Proficiency for JLPT. Other than that,
+    I'm fascinated by web development, game programming and technology in general.
+    </p>
+  </section>
+  <section id="Latest Post">
+    <h2>Note:</h2>
+    <p>
+      This is a very new website and domain I created to share with the public, Its a work in progress
+      at the moment. Hope to see you again!
+    </p>
+
+  </section>
+  <hr>
+
+  <footer>
+    © [2026] [qkeith121]
+  </footer>
+
+</main>
+
+</body>
+</html>
